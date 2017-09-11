@@ -1,0 +1,23 @@
+{
+  "name": "foobanzle",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build:lib": "babel src --out-dir lib",
+    "build:umd:min": "NODE_ENV=production webpack",
+    "build:umd": "NODE_ENV=development webpack",
+    "build": "npm run build:lib && npm run build:umd && npm run build:umd:min",
+    "release": "npm run build && npm publish",
+    "test": "node --harmony-async-await node_modules/.bin/jest",
+    "watch": "node --harmony-async-await node_modules/.bin/jest --watch"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "goddamn-javascript-config": "^1.0.4",
+    "jest": "^20.0.4",
+    "webpack": "^3.3.0"
+  }
+}
