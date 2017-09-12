@@ -1,8 +1,14 @@
-import foobanzle from '../index'
+jasmine.DEFAULT_TIMEOUT_INTERVAL = 100 * 1000
+const { profile } = require('../index')
+const nodeProfile = profile('node')
 
-describe('foobanzle', () => {
-  it('with functions', async () => {
-    const res = await foobanzle([1,2,3])
-    expect({res}).toMatchSnapshot()
-  })
+describe('mem test', () => {
+  it('should not leak', () =>
+    nodeProfile('src/__bench__/safe.mem.js').then(usage => {
+      expect(usage).toBeLessThan(1)
+    }))
+  it('should leak', () =>
+    nodeProfile('src/__bench__/leaky.mem.js').then(usage => {
+      expect(usage).toBeGreaterThan(1)
+    }))
 })

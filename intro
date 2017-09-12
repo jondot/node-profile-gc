@@ -1,5 +1,0 @@
-echo '- - -                       - - -'
-echo - - - A note from your init  - - -
-echo '- - -                       - - -'
-ag INIT-FIXME --ignore intro
-ag foobanzle --ignore intro

@@ -1,12 +1,14 @@
-# Foobanzle
+# node-profile-gc
 
-```
-$ npm i foobanzle
-```
+An out of band profiling tool for node, to discover leaks and memory problems. To support stable results, it uses a separate node process with `gc_trace` for sampling runs.
 
 ## Quick Start
 
-Fill me in.
+```
+$ yarn add --dev node-profile-gc
+```
+
+For now, take a look at [src/__tests__/index.spec.js].
 
 # Contributing
 
@@ -15,7 +17,7 @@ Fork, implement, add tests, pull request, get my everlasting thanks and a respec
 
 ### Thanks:
 
-To all [Contributors](https://github.com/jondot/foobanzle/graphs/contributors) - you make this happen, thanks!
+To all [Contributors](https://github.com/jondot/node-profile-gc/graphs/contributors) - you make this happen, thanks!
 
 
 # Copyright

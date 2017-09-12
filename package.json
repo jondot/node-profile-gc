@@ -1,5 +1,5 @@
 {
-  "name": "foobanzle",
+  "name": "node-profile-gc",
   "version": "1.0.0",
   "main": "lib/index.js",
   "license": "MIT",
@@ -9,11 +9,13 @@
     "build:umd": "NODE_ENV=development webpack",
     "build": "npm run build:lib && npm run build:umd && npm run build:umd:min",
     "release": "npm run build && npm publish",
-    "test": "node --harmony-async-await node_modules/.bin/jest",
-    "watch": "node --harmony-async-await node_modules/.bin/jest --watch"
+    "test": "node node_modules/.bin/jest",
+    "watch": "node node_modules/.bin/jest --watch --runInBand"
   },
   "dependencies": {
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "execa": "^0.8.0",
+    "moving-averages": "^4.0.1"
   },
   "devDependencies": {
     "goddamn-javascript-config": "^1.0.4",
