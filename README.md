@@ -1,4 +1,5 @@
 # node-profile-gc
+![](https://travis-ci.org/jondot/node-profile-gc.svg?branch=master)
 
 An out of band profiling tool for node, to discover leaks and memory problems. To support stable results, it uses a separate node process with `gc_trace` for sampling runs.
 
@@ -8,7 +9,7 @@ An out of band profiling tool for node, to discover leaks and memory problems. T
 $ yarn add --dev node-profile-gc
 ```
 
-For now, take a look at [src/__tests__/index.spec.js].
+For now, take a look at [src/__tests__/index.spec.js](src/__tests__/index.spec.js).
 
 # Contributing
 
